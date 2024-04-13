@@ -10,9 +10,9 @@ class Admin::CategoriesTest < ApplicationSystemTestCase
     assert_selector "h1", text: "Categories"
   end
 
-  test "should create category" do
+  test "should create categories" do
     visit admin_categories_url
-    click_on "New category"
+    click_on "New categories"
 
     fill_in "Description", with: @admin_category.description
     fill_in "Name", with: @admin_category.name
@@ -24,7 +24,7 @@ class Admin::CategoriesTest < ApplicationSystemTestCase
 
   test "should update Category" do
     visit admin_category_url(@admin_category)
-    click_on "Edit this category", match: :first
+    click_on "Edit this categories", match: :first
 
     fill_in "Description", with: @admin_category.description
     fill_in "Name", with: @admin_category.name
@@ -36,7 +36,7 @@ class Admin::CategoriesTest < ApplicationSystemTestCase
 
   test "should destroy Category" do
     visit admin_category_url(@admin_category)
-    click_on "Destroy this category", match: :first
+    click_on "Destroy this categories", match: :first
 
     assert_text "Category was successfully destroyed"
   end
